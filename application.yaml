@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: ufcr28BC
+    url: jdbc:mysql://localhost:3306/search_engine?useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true
+  jpa:
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+    hibernate:
+      jdbc:
+        batch_size: 1000
+      ddl-auto: update
+      order_updates: true
+      batch_versioned_data: true
+      order_inserts: true
+    show-sql: true
+
+indexing-settings:
+  sites:
+    #    - url: https://itgit.ru
+    #      name: ООО "АвтоВизор"
+    #    - url: http://t-logistick.ru
+    #      name: Т-логистик
+    - url: https://skillbox.ru
+      name: СкиллБокс
+    - url: https://www.svetlovka.ru
+      name: Светловка
+    - url: https://dombulgakova.ru
+      name: Дом Булгакова
+    - url: https://www.lutherancathedral.ru
+      name: Кафедральный собор святых Петра и Павла
